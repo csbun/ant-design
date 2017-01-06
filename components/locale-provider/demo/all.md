@@ -36,6 +36,7 @@ const columns = [{
   dataIndex: 'age',
 }];
 
+const calendarValue = moment();
 const Page = React.createClass({
   getInitialState() {
     return {
@@ -92,7 +93,7 @@ const Page = React.createClass({
           />
         </div>
         <div style={{ width: 319, border: '1px solid #d9d9d9', borderRadius: 4 }}>
-          <Calendar fullscreen={false} value={moment()} />
+          <Calendar fullscreen={false} value={calendarValue} />
         </div>
         <div className="example">
           <Table dataSource={[]} columns={columns} />
